@@ -13,10 +13,14 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.7",
+    "@types/dotenv": "^8.2.0",
+    "prisma": "^5.12.1",
+    "ts-node": "^10.9.2",
     "tsc-watch": "^6.2.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ioredis": "^5.4.1",
     "socket.io": "^4.7.5"
   }

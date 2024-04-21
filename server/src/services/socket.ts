@@ -1,17 +1,19 @@
 import { Server } from 'socket.io';
 import Redis from 'ioredis';
 
+// @ts-ignore
 const pub = new Redis({
-    host: 'chatapp-nippun.d.aivencloud.com',
-    port: 18221,
-    username: 'default',
-    password: ''
+    host: process.env.REDIS_HOST,
+    port: process.env.REDIS_PORT,
+    username: process.env.REDIS_USERNAME,
+    password: process.env.REDIS_PASSWORD
 });
+// @ts-ignore
 const sub = new Redis({
-    host: 'chatapp-nippun.d.aivencloud.com',
-    port: 18221,
-    username: 'default',
-    password: ''
+    host: process.env.REDIS_HOST,
+    port: process.env.REDIS_PORT,
+    username: process.env.REDIS_USERNAME,
+    password: process.env.REDIS_PASSWORD
 });
 
 

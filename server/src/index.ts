@@ -1,6 +1,9 @@
 import http from 'http';
-import SocketService from './services/socket';
+import dotenv from 'dotenv';
 
+dotenv.config();
+
+import SocketService from './services/socket';
 
 async function init() {
 
