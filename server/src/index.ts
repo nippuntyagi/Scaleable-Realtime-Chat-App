@@ -4,9 +4,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import SocketService from './services/socket';
+import { startMessageConsumer } from './services/kafka';
 
 async function init() {
-
+    startMessageConsumer()
     const socketService = new SocketService();
 
     const httpServer = http.createServer();

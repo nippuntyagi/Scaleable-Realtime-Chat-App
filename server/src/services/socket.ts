@@ -47,11 +47,8 @@ class SocketService {
         sub.on('message', async (channel, message) =>{
             if (channel === 'MESSAGES') {
                 io.emit('message', message)
-                await prismaClient.message.create({
-                    data: {
-                        text: message
-                    }
-                })
+                await produceMessage(message);
+                console.log(`message produced to kafka broker`)
             }
         })
     }
